@@ -111,7 +111,7 @@ const ResumeBuilder = () => {
 
         const { data } = await api.put('/api/resumes/update',formData, {headers:{Authorization:token}})
 
-        setResumeData(data.resume)
+      setResumeData(prev => ({...prev, ...data.resume}))
         toast.success(data.message)
       } catch (error) {
         console.error("Error saving resume:",error)
