@@ -7,7 +7,7 @@ const aiRouter=express.Router();
 
 
 aiRouter.post('/enhance-pro-sum',protect,enhanceProfessionalSummary)
-aiRouter.post('/enhance-pro-desc',protect,enhanceJobDescription)
+aiRouter.post('/enhance-job-desc',protect,enhanceJobDescription)
 aiRouter.post('/upload-resume',protect,uploadResume)
 
 export default aiRouter;
